@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Driver - DriveNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="center">
+    <h2>Book a Driver</h2>
+    <input type="text" id="location" placeholder="Pickup Location">
+    <input type="datetime-local" id="datetime">
+    <button onclick="bookDriver()">Book Now</button>
+  </div>
+
+  <script>
+    function bookDriver() {
+      const loc = document.getElementById("location").value;
+      const time = document.getElementById("datetime").value;
+      if (loc && time) {
+        alert(`Driver booked at ${loc} for ${time}`);
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Please fill all fields.");
+      }
+    }
+  </script>
+</body>
+</html>
